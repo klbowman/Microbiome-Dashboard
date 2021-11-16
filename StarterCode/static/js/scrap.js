@@ -1,9 +1,62 @@
-d3.json("samples.json").then((data) => {
-	console.log(data);
+var data = [{
+	type: 'bar',
+	x: [20, 14, 23],
+	y: ['giraffes', 'orangutans', 'monkeys'],
+	orientation: 'h'
+  }];
+  
+  Plotly.newPlot('bar', data);
+
+
+
+
+
+
+function optionChanged() {
+	var x = document.getElementById("selDataset").value;
+	d3.select("h5").text('Test Subject ID No.: ' + x);
+	console.log(x);
+	d3.json("samples.json").then((data) => {
+		var samples = data;
+		var sample_data = samples.samples;
+		OTU_ids = [];
+		OTU_labels = [];
+		for (let i = 0; i < sample_data.length; i++) {
+			let sample = sample_data[i]
+			if (sample.id = x) {
+				OTU_ids.push(sample.otu_ids);
+				OTU_labels.push(sample.otu_labels);
+			}
+		}
 	});
 
 
+  for (let i = 0; i < sample_data.length; i++) {
+    let sample = sample_data[i]
+    if (sample.id === x) {
+      OTU_ids.push(sample.otu_ids);
+      OTU_labels.push(sample.otu_labels);
+      console.log(OTU_ids);
 
+
+
+d3.json("samples.json").then((data) => {
+	console.log(data);
+	// Save data to variable
+	Object.entries(data).forEach(function(key){
+	console.log(key[0]);
+	console.log(key[1]);
+	var key1 = key[0];
+	var value1 = key[1];
+	})
+	});
+
+
+  let select = d3.select("#selDataset");
+	let result = d3.select("h5");
+	select.addEventListener(optionChanged () {
+		result.textContent = this.value;
+	});
 var individuals = data.names;
 
 for (let i = 0; i < individuals.length; i++) {
