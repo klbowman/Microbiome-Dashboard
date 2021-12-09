@@ -6,11 +6,11 @@ Interactive dashboard that displays charts and text for data entries selected fr
 
 This repository is designed to visualize taxonomic data using charts, and display metadata in an organized panel. The [data](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/) comes from a study that sequenced the microbiome of 153 human belly buttons (Hulcr et al., 2012). Individual samples are identified by a numerical code and accompanied by metadata including age, gender, ethnicity, etc. Operational taxonomic units (OTUs) id numbers and counts are provided for each sample.
 
-This repository uses Leaflet to create two interactive maps of earthquake occurrences across the globe, using GeoJSON data from the [United States Geological Survey] (https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php). 
+The dashboard includes a drop-down menu that displays the numerical code for each individual sample. When a sample is selected, the “Demographic Info” panel is populated with metadata and the following three charts are populated with sample data:
+* Bar graph displaying the top 10 OTUs by count
+* Gauge plot showing the belly button scrubs per week
+* Bubble plot displaying OTU counts for the entire sample
 
-The first map shows the location of all earthquakes recorded during the past 30 days on an OpenStreetMap tile layer. Data marker size corresponds to earthquake magnitude and color corresponds to the depth where the earthquake began to rupture. Data marker popups include a description of the earthquake location, date and time of occurrence, magnitude, and depth (kilometers). 
-
-The second map shows the location of all earthquakes recorded during the past 30 days, and the location of tectonic plate boundaries, with three tile layer options. Earthquake data markers and popup information is the same as the first map. Layer control is used to toggle between three map layers (Satellite, Grayscale, Outdoors) and two datasets (Tectonic Plates, Earthquakes).
 
 ## Getting Started
 
