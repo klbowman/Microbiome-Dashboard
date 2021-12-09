@@ -10,6 +10,7 @@ The dashboard includes a drop-down menu that displays the numerical code for eac
 * Bar graph displaying the top 10 OTUs by count
 * Gauge plot showing the belly button scrubs per week
 * Bubble plot displaying OTU counts for the entire sample
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/74067302/145448320-bbe43cc2-f2fc-4fb7-955d-1c9fcb553b96.png" alt="Dashboard Image"/>
 </p>
@@ -30,8 +31,7 @@ The dashboard includes a drop-down menu that displays the numerical code for eac
 ### Installing
 
 * Clone this repository to your desktop.
-* For the simple map (Earthquake Map 1), navitage to the Leaflet-Step-1 directory and open index.html in your browser.
-* For the layerd map (Earthquake Map 2), navigate to the top level of the directory and open index.html in your browser.
+* Navitage to the home directory and open index.html in your browser.
 
 ### Data Sources
 
