@@ -1,6 +1,8 @@
 // Use the D3 library to read in samples.json
 
-d3.json("samples.json").then((data) => {
+const dataPath = "data/samples.json";
+
+d3.json(dataPath ).then((data) => {
 	console.log(data);
 	// Save JSON string as variable
 	var sample_data = data;
@@ -9,7 +11,6 @@ d3.json("samples.json").then((data) => {
 	samplesIDs.forEach((sample)=> {
 		d3.select("#selDataset").append("option").attr("value", sample).text(sample); 
 	})
- 
 });
 
 
@@ -19,7 +20,7 @@ function optionChanged() {
 	var x = document.getElementById("selDataset").value;
 	d3.select("h5").text('Test Subject ID No.: ' + x);
 	console.log(x);
-	d3.json("samples.json").then((data) => {
+	d3.json(dataPath ).then((data) => {
 		console.log(data);
 		// Save JSON string as variable
 		var samples_data = data;
