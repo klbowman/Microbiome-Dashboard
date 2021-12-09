@@ -33,7 +33,8 @@ The dashboard includes a drop-down menu that displays the numerical code for eac
 
 ## Authors
 
-Contributors names and contact info
+Katlin Bowman, PhD
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+E: klbowman@ucsc.edu
+
+[LinkedIn](https://www.linkedin.com/in/katlin-bowman/)
