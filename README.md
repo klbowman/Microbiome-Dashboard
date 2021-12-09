@@ -1,6 +1,6 @@
 # Interactive Web Visualizations 
 
-Interactive dashboard that displays charts and text for data entries selected from a dropdown menu. View the final product [here](https://klbowman.github.io/microbiome-dashboard/).
+Interactive dashboard that displays charts and text from a JSON file. View the final product [here](https://klbowman.github.io/microbiome-dashboard/).
 
 ## Description
 
