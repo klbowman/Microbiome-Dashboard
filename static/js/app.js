@@ -11,6 +11,9 @@ d3.json(dataPath ).then((data) => {
 	samplesIDs.forEach((sample)=> {
 		d3.select("#selDataset").append("option").attr("value", sample).text(sample); 
 	})
+	// Populate page with data upon loading
+	var x = samplesIDs[0];
+	optionChanged(x)
 });
 
 
