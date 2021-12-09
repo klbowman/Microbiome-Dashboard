@@ -4,6 +4,8 @@ Interactive dashboard that displays charts and text for data entries selected fr
 
 ## Description
 
+This repository displays 
+
 This repository uses Leaflet to create two interactive maps of earthquake occurrences across the globe, using GeoJSON data from the [United States Geological Survey] (https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php). 
 
 The first map shows the location of all earthquakes recorded during the past 30 days on an OpenStreetMap tile layer. Data marker size corresponds to earthquake magnitude and color corresponds to the depth where the earthquake began to rupture. Data marker popups include a description of the earthquake location, date and time of occurrence, magnitude, and depth (kilometers). 
@@ -17,7 +19,6 @@ The second map shows the location of all earthquakes recorded during the past 30
 * JavaScript
 * HTML
 * CSS
-* Leaflet
 
 ### Installing
 
@@ -27,8 +28,8 @@ The second map shows the location of all earthquakes recorded during the past 30
 
 ### Data Sources
 
-* United States Geological Survey. (2021). All Earthquakes, Past 30 Days. Retrived from [https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php] (https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
-* Ahlenius, H., Bird, Peter. (2014). World tectonic plates and boundaries. Retrived from [https://github.com/fraxen/tectonicplates] (https://github.com/fraxen/tectonicplates)
+* Hulcr J, Latimer AM, Henley JB, Rountree NR, Fierer N, et al. (2012) A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable. PLoS ONE 7(11): e47712. doi:10.1371/journal.pone.0047712 [Access Data](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/)
+
 
 ## Authors
 
