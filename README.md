@@ -10,8 +10,12 @@ The dashboard includes a drop-down menu that displays the numerical code for eac
 * Bar graph displaying the top 10 OTUs by count
 * Gauge plot showing the belly button scrubs per week
 * Bubble plot displaying OTU counts for the entire sample
-![image](https://user-images.githubusercontent.com/74067302/145448320-bbe43cc2-f2fc-4fb7-955d-1c9fcb553b96.png)
-![image](https://user-images.githubusercontent.com/74067302/145448339-7e38f680-868a-4b75-85b9-0467e83002c9.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/74067302/145448320-bbe43cc2-f2fc-4fb7-955d-1c9fcb553b96.png" alt="Dashboard Image"/>
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/74067302/145448339-7e38f680-868a-4b75-85b9-0467e83002c9.png" alt="Dashboard Image"/>
+</p>
 
 
 
