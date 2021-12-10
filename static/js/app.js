@@ -3,7 +3,6 @@
 const dataPath = "data/samples.json";
 
 d3.json(dataPath ).then((data) => {
-	console.log(data);
 	// Save JSON string as variable
 	var sample_data = data;
 	var samplesIDs = sample_data.names;
@@ -29,6 +28,7 @@ function optionChanged() {
 		var samples_data = data;
 		var sample_data = samples_data.samples;
 		var metadata = samples_data.metadata;
+
 		
 		// Grab metadata for selected sample
 		for (let j = 0; j < metadata.length; j++) {
@@ -38,71 +38,35 @@ function optionChanged() {
 				Box.html("");
 				Object.entries(meta).forEach(([key,value])=> {
 					Box.append("h6").text(key + " : " + value);
+					// store data for wash frequency
+					let wash = parseInt(meta.wfreq);
+					
+						// Add guage plot
+						var data = [
+							{
+							  domain: { x: [0, 1], y: [0, 1] },
+							  value: wash,
+							  title: { text: "Belly Button Wash Frequency" },
+							  type: "indicator",
+							  mode: "gauge+number+delta",
+							  gauge: {
+								axis: { range: [null, 10] },
+								steps: [
+								  { range: [0, 5], color: "lightgray" },
+								  { range: [5, 10], color: "gray" }
+								],
+							  }
+							}
+						  ];
+						var layout = { width: 600, height: 500, margin: { t: 0, b: 0 } };
+						Plotly.newPlot('gauge', data, layout)
+
 				}
 				)
 
-				// Add guage plot
-
-				// needle
-				var level = 6;
-				var degrees = 180 - level,
-					radius = .5;
-				var radians = degrees * Math.PI / 180;
-				var xx = radius * Math.cos(radians);
-				var yy = radius * Math.sin(radians);
-
-				var mainPath = 'M -.0 -0.025 L .0 0.025 L ',
-     			pathX = String(xx),
-     			space = ' ',
-     			pathY = String(yy),
-     			pathEnd = ' Z';
-				var path = mainPath.concat(pathX,space,pathY,pathEnd);
-
-				var wash_data = [{ type: 'scatter',
-					x: [0], y:[0],
-						marker: {size: 28, color:'850000'},
-						showlegend: false,
-						name: 'speed',
-						text: level,
-						hoverinfo: 'text+name'},
-					{ values: meta.wfreq,
-					rotation: 90,
-					text: ['0-1', '1-2', '2-3', '3-4','4-5', '5-6', '6-7','7-8','8-9'],
-					textinfo: 'text',
-					textposition:'inside',
-					marker: {colors:['rgba(14, 127, 0, .5)', 'rgba(110, 154, 22, .5)',
-											'rgba(170, 202, 42, .5)','rgba(290, 205, 75, .5)', 'rgba(202, 209, 95, .5)',
-											'rgba(210, 206, 145, .5)','rgba(222, 216, 175, .5)', 'rgba(232, 226, 202, .5)',
-											'rgba(242, 245, 225, .5)','rgba(255, 255, 255, 0)']},
-					labels: ['0-1', '1-2', '2-3', '3-4','4-5', '5-6', '6-7','7-8','8-9'],
-					hoverinfo: 'label',
-					hole: .5,
-					type: 'pie',
-					showlegend: false
-					}];
-
-				
-					var wash_layout = {
-						shapes:[{
-							type: 'path',
-							path: path,
-							fillcolor: '850000',
-							line: {
-							  color: '850000'
-							}
-						  }],
-						title: '<b>Belly Button Washing Frequency</b> <br> Scrubs per Week',
-						height: 600,
-						width: 800,
-						xaxis: {zeroline:false, showticklabels:false,
-								   showgrid: false, range: [-1, 1]},
-						yaxis: {zeroline:false, showticklabels:false,
-								   showgrid: false, range: [-1, 1]}
-					  };
-				Plotly.newPlot('gauge', wash_data, wash_layout);
-
 			}
-		}
+
+		};
 
 
 
@@ -110,6 +74,7 @@ function optionChanged() {
 		for (let i = 0; i < sample_data.length; i++) {
 			let sample = sample_data[i];
 
+							
 			if (sample.id === x) {
 				// Create arrays with data from plot 
 				sample_values = sample.sample_values;
@@ -119,6 +84,7 @@ function optionChanged() {
 				slicedIds = sample_ids.slice(0,10);
 				reversedIds = slicedIds.reverse();
 				y_values = reversedIds.map(i => "OTU-" + i);
+				
 
 				//Create horizontal bar chart
 				let trace1 = {
@@ -168,7 +134,6 @@ function optionChanged() {
 				  };
 				  
 				  Plotly.newPlot('bubble', data, bubble_layout);
-
 
 
 	
