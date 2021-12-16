@@ -36,7 +36,7 @@ The dashboard includes a drop-down menu that displays the numerical code for eac
 * Hulcr J, Latimer AM, Henley JB, Rountree NR, Fierer N, et al. (2012) A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable. PLoS ONE 7(11): e47712. doi:10.1371/journal.pone.0047712 [Access Data](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/)
 
 
-## Authors
+## Author
 
 Katlin Bowman, PhD
 
