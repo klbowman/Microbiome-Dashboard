@@ -29,7 +29,7 @@ The dashboard includes a drop-down menu that displays the numerical code for eac
 ### Installing
 
 * Clone this repository to your desktop.
-* Navitage to the home directory and open index.html in your browser.
+* Navigate to the home directory and open index.html in your browser.
 
 ### Data Sources
 
